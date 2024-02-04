@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Servey Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+
+</head>
+<body class="flex">
+    <main >
+        <h1>Dojo Survey</h1>
+        <form action="/results" method="post">
+            <label for="name">Your Name:</label><br>
+            <input type="text" name="name"size='35'><br>
+
+            <label for="dojolocation">Dojo Location:</label><br>
+            <select name="dojolocation">
+                <option >Select Dojo Hall</option>
+                <option value="San Jose">San Jose,CA</option>
+                <option value="Chicago">Chicago, Il </option>
+                <option value="Seattle">Seattle, WA</option>
+                <option value="Burbank">Burbank, CA</option>
+                <option value="Online">Online</option>
+            </select><br>
+            
+            <label for="programlanguage">Favorite Language:</label><br>
+            <select name="programlanguage">
+                <option value="HTML/CSS">Programming Language</option>
+                <option value="HTML/CSS">HTML/CSS</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+            </select><br>
+            <label for="">Comment (optional): </label><br>
+            <textarea name="comments" id="" cols="60" rows="15"></textarea><br>
+            <div class="flex">
+            <input class="button" type="submit" value ='submit survey'>
+        </div>
+        </form>
+    </main>
+</body>
+</html>

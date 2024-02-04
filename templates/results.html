@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Suvery Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+
+</head>
+<body class="flex">
+    <main>
+        <h3><strong>Submitted Info</strong></h3>
+        <div>
+            <p>Name: {{session['fullname']}} </p>
+            <p> Dojo location: {{session['dojo']}}</p>
+            <p>Favorite: {{session['language']}}</p>
+            <p>Comment:</p>
+            <p>{{session['comments']}}</p>
+        </div>
+        <div class="flex">
+        <button class="button"><a href="/">Go Back</a></button>
+        </div>
+    </main>
+</body>
+</html>
